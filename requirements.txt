@@ -1,0 +1,7 @@
+streamlit
+pandas
+pydeck
+numpy
+requests
+streamlit-js-eval
+google-generativeai
