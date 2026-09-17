@@ -251,9 +251,11 @@ else:
     default_lon = 72.8777
     st.sidebar.info("💡 GPS Active")
 
-user_lat = st.sidebar.number_input("Current Latitude", value=default_lat, format="%.4f")
-user_lon = st.sidebar.number_input("Current Longitude", value=default_lon, format="%.4f")
-max_distance_km = st.sidebar.slider("Radius Range (km)", 1.0, 20.0, 18.0, step=0.5)
+user_lat = default_lat
+user_lon = default_lon
+max_distance_km = st.sidebar.slider(
+    "Radius Range (km)", 1.0, 20.0, 18.0, step=0.5
+)
 
 st.sidebar.markdown("---")
 st.sidebar.title("🔍 Filter Options")
@@ -402,7 +404,7 @@ st.markdown("---")
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "GROUP Matcher & Bill Splitter", 
     "SLOTS Table Booking & Queue", 
-    "3D Table & Floor Plan",
+    "Dining Area View",
     "MENUS & AI Inspector", 
     "Group Swipe Lobby",
     "VERIFY Community Audit Portal"
@@ -483,7 +485,7 @@ with tab2:
 
 # --- TAB 3: 3D TABLE & FLOOR PLAN VIEWER ---
 with tab3:
-    st.subheader("📐 Interactive 3D Floor Plan & Table Selection")
+    st.subheader("📐 Interactive Dining Area View")
     st.write("Choose your exact preferred seating location inside the restaurant.")
     
     col_fp1, col_fp2 = st.columns([1, 2])
